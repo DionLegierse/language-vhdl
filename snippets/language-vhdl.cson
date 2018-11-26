@@ -24,6 +24,16 @@
     'prefix': 'pros'
     'body': '${1:identifier} : process(${2:clock})\nbegin\n\tif rising_edge(${2:clock}) then\n\t\t$0\n\tend if;\nend process;'
 
+  'port map':
+    'prefix': 'portmap'
+    'body': 'PORT MAP(\n\t$0\n);'
+  'component':
+    'prefix': 'comp'
+    'body': 'COMPONENT ${1:entity} IS\n\tPORT(\n\t\t$0\n\t);\nEND COMPONENT;'
+  'entity component':
+      'prefix': 'entcomp'
+      'body': '${1:identifier} : ENTITY WORK.${2:ENTITY_NAME}(${3:BEHAVIOR})\nPORT MAP(\n\t$0\n);'
+
   'case':
     'prefix': 'case'
     'body': 'case( ${1:signal_name} ) is\n\n\twhen ${2:IDLE} =>\n\t\t$0\n\n\twhen others =>\n\nend case;'
