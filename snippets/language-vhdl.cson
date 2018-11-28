@@ -26,13 +26,13 @@
 
   'port map':
     'prefix': 'portmap'
-    'body': 'PORT MAP(\n\t$0\n);'
+    'body': 'port map(\n\t$0\n);'
   'component':
     'prefix': 'comp'
-    'body': 'COMPONENT ${1:entity} IS\n\tPORT(\n\t\t$0\n\t);\nEND COMPONENT;'
+    'body': 'component ${1:entity} is\n\tport(\n\t\t$0\n\t);\nend component;'
   'entity component':
       'prefix': 'entcomp'
-      'body': '${1:identifier} : ENTITY WORK.${2:ENTITY_NAME}(${3:BEHAVIOR})\nPORT MAP(\n\t$0\n);'
+      'body': '${1:identifier} : entity work.${2:ENTITY_NAME}(${3:BEHAVIOR})\nport map(\n\t$0\n);'
 
   'case':
     'prefix': 'case'
@@ -65,13 +65,13 @@
     'body': 'unsigned(${1:x} downto ${2:0});$0'
   'integer range':
     'prefix': 'integer_t'
-    'body': 'INTEGER RANGE ${1:low} TO ${2:high};$0'
+    'body': 'integer range ${1:low} to ${2:high};$0'
   'positive range':
     'prefix': 'positive_t'
-    'body': 'POSITIVE RANGE ${1:1} TO ${2:high};$0'
+    'body': 'positive range ${1:1} to ${2:high};$0'
   'natural range':
     'prefix': 'natural_t'
-    'body': 'NATURAL RANGE ${1:0} TO ${2:high};$0'
+    'body': 'natural range ${1:0} to ${2:high};$0'
 
   'signed range':
     'prefix': 'sr'
