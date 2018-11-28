@@ -55,17 +55,23 @@
     'body': '${1:identifier} : while ${2:expression} loop\n\t$0\nend loop;'
 
   'signed downto':
-    'prefix': 'signed_t'
+    'prefix': 'signed_dt'
     'body': 'signed(${1:x} downto ${2:0});$0'
   'std_logic_vector downto':
-    'prefix': 'std_logic_vector_t'
+    'prefix': 'std_logic_vector_dt'
     'body': 'std_logic_vector(${1:x} downto ${2:0});$0'
   'unsigned downto':
-    'prefix': 'unsigned_t'
+    'prefix': 'unsigned_dt'
     'body': 'unsigned(${1:x} downto ${2:0});$0'
   'integer range':
     'prefix': 'integer_t'
     'body': 'INTEGER RANGE ${1:low} TO ${2:high};$0'
+  'positive range':
+    'prefix': 'positive_t'
+    'body': 'POSITIVE RANGE ${1:1} TO ${2:high};$0'
+  'natural range':
+    'prefix': 'natural_t'
+    'body': 'NATURAL RANGE ${1:0} TO ${2:high};$0'
 
   'signed range':
     'prefix': 'sr'
